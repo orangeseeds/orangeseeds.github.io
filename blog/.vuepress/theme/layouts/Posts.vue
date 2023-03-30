@@ -18,3 +18,8 @@
     computed: mapGetters(['posts', 'blog'])
   }
 </script>
+<style>
+.post-feed{
+  background-color: #000000 !important;
+}
+</style>

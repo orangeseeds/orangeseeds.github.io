@@ -98,3 +98,9 @@ export default {
   }
 };
 </script>
+
+<style>
+  .post-full-content{
+    background-color: black !important;
+  }
+</style>

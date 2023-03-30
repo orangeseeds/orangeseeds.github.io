@@ -1,17 +1,13 @@
 {
-  "title": "🍊Orangeseeds",
+  "title": "🍊rangeseeds",
   "description": "Welcome to my blog!!",
   "base": "/",
   "themeConfig": {
-    "cover": "/images/cover.jpg",
+    "cover": "/images/gopher_snacks.png",
     "nav": [
       {
         "text": "Home",
         "link": "/"
-      },
-      {
-        "text": "Media",
-        "link": "/media.html"
       },
       {
         "text": "About",
@@ -24,26 +20,22 @@
         "link": "/posts"
       },
       {
-        "text": "Facebook",
-        "link": "https://facebook.com/"
-      },
-      {
-        "text": "Twitter",
-        "link": "https://twitter.com"
+        "text": "Linkedin",
+        "link": "https://linkedin.com"
       },
       {
         "text": "Github",
-        "link": "https://github.com/vuepress-theme-casper"
+        "link": "https://github.com/orangeseeds"
       }
     ],
     "social": {
-      "github": "https://github.com/alexander-heimbuch/vuepress-theme-casper",
-      "twitter": "https://twitter.com/zusatzstoff"
+      "linkedin": "https://linkedin.com/",
+      "github": "https://github.com/orangeseeds"
     },
     "defaultAuthor": {
-      "link": "https://alexander.heimbu.ch",
-      "name": "Default Author",
-      "gravatar": "2bfa103a13c88b5ffd26da6f982f11df"
+      "link": "https://orangeseeds.github.io",
+      "name": "Orangeseeds",
+      "gravatar": "d9a7a6aa87f0890e6d546bd5e8ad2251"
     },
     "search": true
   }

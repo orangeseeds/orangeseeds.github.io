@@ -51,3 +51,12 @@ export default {
   }
 };
 </script>
+
+<style>
+  .nav{
+    font-weight: bolder;
+  }
+  li[role="menuitem"]{
+    font-weight: bolder;
+  }
+</style>

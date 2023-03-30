@@ -29,3 +29,9 @@
     }
   }
 </script>
+
+<style>
+#site-main{
+  background-color: #000000;
+}
+</style>

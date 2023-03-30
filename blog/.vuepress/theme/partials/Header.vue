@@ -40,7 +40,11 @@ export default {
     backgroundStyle() {
       if (this.header.coverImage) {
         return {
-          "background-image": `url(${this.$withBase(this.header.coverImage)})`
+          "background-image": `url(${this.$withBase(this.header.coverImage)})`,
+          "background-color": "black"
+          // "height": "60vh"
+          // "background-position-y": "-4%",
+          // "height": "78vh"
         };
       }
 
@@ -78,8 +82,36 @@ export default {
         "no-image": !headerImage,
         "site-header-background": this.isArchive || this.isHome,
         "site-nav-main": this.isPage || this.isPost
+        // "height": "17vh"
       };
     }
   }
 };
 </script>
+<style>
+  .site-header-content{
+    margin: 10% !important;
+  }
+
+  .site-title{
+    text-shadow: 2px 2px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
+    color: darkorange;
+  }
+
+  .site-description{
+    font-weight: bold !important;
+    text-shadow: 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
+  }
+/*
+  .site-title{
+    font-weight: bolder;
+  }
+
+
+  color: orange;
+    text-shadow: 3px 3px 0px #000, 1px 1px 0px #000, -1px -1px 0px #000, 0px 1px 0px #000;
+*/
+.site-header-background:after, .site-header-background:before {
+  opacity: 65%;
+}
+</style>

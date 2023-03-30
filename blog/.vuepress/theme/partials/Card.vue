@@ -14,6 +14,7 @@
           </section>
         </a>
         <footer class="post-card-meta">
+          <!--
           <ul class="author-list" v-if="post.author.name">
             <li class="author-list-item">
               <div class="author-name-tooltip">
@@ -24,8 +25,9 @@
               </a>
             </li>
           </ul>
-          <div class="post-card-byline-content">
             <span v-if="post.author.name"><a :href="post.author.link">{{ post.author.name }}</a></span>
+          -->
+          <div class="post-card-byline-content">
             <span class="post-card-byline-date">
               <time v-if="datetime" :datetime="datetime">{{ localeDate }}</time> <span v-if=" post.readingTime" class="bull">&bull;</span> {{ post.readingTime }}</span>
           </div>
@@ -66,4 +68,19 @@
 .post-card-image-link{
   max-height: 180px !important;
 }
+.post-card-byline-content{
+  margin-left: 0px;
+}
+.post-card-title{
+  text-shadow: 1px 1px 0px darkorange, -1px -1px 0px darkorange, 1px -1px 0px darkorange, -1px 1px 0px darkorange;
+    color: white;
+}
+.post-card-primary-tag{
+  color: darkorange;
+}
+
+/*
+    background-position-y: -4%;
+    height: 78vh;
+    */
 </style>
