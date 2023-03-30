@@ -1,37 +1,116 @@
-## Welcome to GitHub Pages
+# Casper Theme
 
-You can use the [editor on GitHub](https://github.com/orangeseeds/orangeseeds.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Ghosts default theme [Casper](https://github.com/TryGhost/Casper) for Vuepress.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Create with Stackbit
 
-### Markdown
+[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/alexander-heimbuch/vuepress-theme-casper)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Installation
 
-```markdown
-Syntax highlighted code block
+Install the npm package:
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+$ npm i vuepress-theme-casper --save
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Adapt your vuepress config `config.js`:
 
-### Jekyll Themes
+```js
+module.exports = {
+  title: "Theme Title",
+  description: "Theme description",
+  base: "/",
+  theme: "casper",
+  head: [["link", { rel: "icon", href: "/favicon.png" }]],
+  markdown: {
+    anchor: {
+      permalink: false,
+      permalinkBefore: false
+    }
+  },
+  themeConfig: {
+    cover: "/images/cover.jpg",
+    logo: "/images/logo.png",
+    nav: [
+      {
+        text: "Home",
+        link: "/"
+      },
+      {
+        text: "Posts",
+        link: "/posts"
+      },
+      {
+        text: "Category",
+        link: "/category/some-category"
+      },
+      {
+        text: "Page",
+        link: "/a-page.html"
+      }
+    ],
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/orangeseeds/orangeseeds.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+    footer: [
+      {
+        text: "Latest Posts",
+        link: "/posts"
+      },
+      {
+        text: "Facebook",
+        link: "https://facebook.com/"
+      },
+      {
+        text: "Twitter",
+        link: "https://twitter.com"
+      },
+      {
+        text: "Github",
+        link: "https://github.com/"
+      }
+    ],
+    social: {
+      github: "https://github.com",
+      twitter: "https://twitter.com",
+      facebook: "https://facebook.com",
+      xing: "https://xing.de",
+      instagram: "https://instagram.com",
+      linkedin: "https://linkedin.com"
+    },
+    defaultAuthor: {
+      link: "https://alexander.heimbu.ch",
+      name: "Default Author",
+      gravatar: "2bfa103a13c88b5ffd26da6f982f11df"
+    },
+    search: false
+  }
+};
+```
 
-### Support or Contact
+## Page/Post Parameters
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+The following parameters are available:
+
+```
+---
+title: And when we woke up, we had these bodies.
+image: https://picsum.photos/1920/1080/?random&date=2018-04-15
+publish: 2018-04-15
+type: post|page
+tags:
+  - toe-tappingly tragic
+  - thanks to the Internet
+categories:
+  - futurama
+  - dexter
+readingTime: 10 Minutes
+author:
+  link: /category/dexter
+  name: Dexter
+  gravatar: 2bfa103a13c88b5ffd26da6f982f11df
+---
+```
+
+The post intro uses the `<!-- more -->` tag.
+
+## Caveats
