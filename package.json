@@ -14,7 +14,8 @@
     "bundle:clean": "rm -rf publish && mkdir -p publish",
     "bundle:copy": "cp -R blog/.vuepress/theme/* publish/ && cp package.json publish/",
     "bundle": "npm run build && npm run bundle:clean && npm run bundle:copy",
-    "deploy:gh-pages": "env BASE='/vuepress-theme-casper/' npm run build && GH_EMAIL=github@heimbu.ch GH_NAME='Alexander Heimbuch' ./scripts/gh-pages.sh dist"
+    "deploy:gh-pages": "env BASE='/vuepress-theme-casper/' npm run build && GH_EMAIL=github@heimbu.ch GH_NAME='Alexander Heimbuch' ./scripts/gh-pages.sh dist",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "lodash": "^4.17.15",
