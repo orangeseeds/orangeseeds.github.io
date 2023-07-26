@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link rel="modulepreload" href="../_app/immutable/entry/start.221a8561.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.e108d1fd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.f797d542.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.47fb8e41.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.d061b55e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.a28bfc2a.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.cef056c7.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/2.a8a202c3.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.e59479a4.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/6.ccb12d70.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <nav data-svelte-h="svelte-xj1woj"><a href="/">home</a> <a href="/about">about</a></nav> <div class="layout"><main><h1>This is a blog page for post #4</h1> <p>body #4</p></main></div> <aside><h3 data-svelte-h="svelte-ilj6ua">More Posts</h3> <ul><li><a href="/blog/1">post #1</a> </li><li><a href="/blog/2">post #2</a> </li><li><a href="/blog/3">post #3</a> </li><li><a href="/blog/4">post #4</a> </li></ul></aside> 
+			
+			<script>
+				{
+					__sveltekit_j15z87 = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":{formData:void 0},"uses":{}},{"type":"data","data":{summaries:[{slug:"1",title:"post #1",body:"body #1"},{slug:"2",title:"post #2",body:"body #2"},{slug:"3",title:"post #3",body:"body #3"},{slug:"4",title:"post #4",body:"body #4"}]},"uses":{}},{"type":"data","data":{post:{title:"post #4",body:"body #4",slug:"4"}},"uses":{"params":["slug"]}}];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.221a8561.js"),
+						import("../_app/immutable/entry/app.d061b55e.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 6],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
