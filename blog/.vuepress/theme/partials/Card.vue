@@ -1,8 +1,10 @@
 <template>
   <article class="post-card post" :class="{ 'no-image': !post.image, 'post-card-large': !!large }">
+  <!--
     <a v-if="post.image" class="post-card-image-link" :href="$withBase(post.path)" aria-label="link to post">
       <img class="post-card-image" :src="$withBase(this.post.image)" sizes="(max-width: 1000px) 400px, 200px" loading="lazy" :alt="post.title" />
     </a>
+  -->
     <div class="post-card-content">
         <a class="post-card-content-link" :href="$withBase(post.path)" aria-label="link to post">
           <header class="post-card-header">
@@ -78,8 +80,27 @@
 .post-card-primary-tag{
   color: darkorange;
 }
-
+.post-card-excerpt > p {
+  font-size: 20px !important;
+}
+.post-card-large{
+  flex-direction: column !important;
+  padding-left: 0px;
+}
+.post-card-title{
+  font-size: 38px !important;
+}
 /*
+@media (min-width: 795px)
+.post-card-content-link{
+  padding-left: 0px !important;
+ 
+}
+.post-card-large .post-card-excerpt p {
+    margin-bottom: 1.5em;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+}
     background-position-y: -4%;
     height: 78vh;
     */

@@ -22,4 +22,7 @@
 .post-feed{
   background-color: #000000 !important;
 }
+.inner{
+  margin: 0px;
+}
 </style>
