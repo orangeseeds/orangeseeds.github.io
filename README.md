@@ -1,116 +1,38 @@
-# Casper Theme
+# create-svelte
 
-Ghosts default theme [Casper](https://github.com/TryGhost/Casper) for Vuepress.
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Create with Stackbit
+## Creating a project
 
-[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/alexander-heimbuch/vuepress-theme-casper)
-
-## Installation
-
-Install the npm package:
+If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-$ npm i vuepress-theme-casper --save
+# create a new project in the current directory
+npm create svelte@latest
+
+# create a new project in my-app
+npm create svelte@latest my-app
 ```
 
-Adapt your vuepress config `config.js`:
+## Developing
 
-```js
-module.exports = {
-  title: "Theme Title",
-  description: "Theme description",
-  base: "/",
-  theme: "casper",
-  head: [["link", { rel: "icon", href: "/favicon.png" }]],
-  markdown: {
-    anchor: {
-      permalink: false,
-      permalinkBefore: false
-    }
-  },
-  themeConfig: {
-    cover: "/images/cover.jpg",
-    logo: "/images/logo.png",
-    nav: [
-      {
-        text: "Home",
-        link: "/"
-      },
-      {
-        text: "Posts",
-        link: "/posts"
-      },
-      {
-        text: "Category",
-        link: "/category/some-category"
-      },
-      {
-        text: "Page",
-        link: "/a-page.html"
-      }
-    ],
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-    footer: [
-      {
-        text: "Latest Posts",
-        link: "/posts"
-      },
-      {
-        text: "Facebook",
-        link: "https://facebook.com/"
-      },
-      {
-        text: "Twitter",
-        link: "https://twitter.com"
-      },
-      {
-        text: "Github",
-        link: "https://github.com/"
-      }
-    ],
-    social: {
-      github: "https://github.com",
-      twitter: "https://twitter.com",
-      facebook: "https://facebook.com",
-      xing: "https://xing.de",
-      instagram: "https://instagram.com",
-      linkedin: "https://linkedin.com"
-    },
-    defaultAuthor: {
-      link: "https://alexander.heimbu.ch",
-      name: "Default Author",
-      gravatar: "2bfa103a13c88b5ffd26da6f982f11df"
-    },
-    search: false
-  }
-};
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-## Page/Post Parameters
+## Building
 
-The following parameters are available:
+To create a production version of your app:
 
-```
----
-title: And when we woke up, we had these bodies.
-image: https://picsum.photos/1920/1080/?random&date=2018-04-15
-publish: 2018-04-15
-type: post|page
-tags:
-  - toe-tappingly tragic
-  - thanks to the Internet
-categories:
-  - futurama
-  - dexter
-readingTime: 10 Minutes
-author:
-  link: /category/dexter
-  name: Dexter
-  gravatar: 2bfa103a13c88b5ffd26da6f982f11df
----
+```bash
+npm run build
 ```
 
-The post intro uses the `<!-- more -->` tag.
+You can preview the production build with `npm run preview`.
 
-## Caveats
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
