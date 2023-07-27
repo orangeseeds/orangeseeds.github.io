@@ -14,7 +14,7 @@
     </p>
 </div>
 <article
-    class="prose prose-slate-900 dark:prose-invert prose-img:rounded-sm prose-a:text-blue-600 prose-p:font-medium max-w-xl"
+    class="prose prose-slate-900 dark:prose-invert prose-img:rounded-sm prose-a:text-blue-600 prose-p:font-normal max-w-xl"
 >
     <svelte:component this={data.component} />
 </article>

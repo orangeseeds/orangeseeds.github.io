@@ -2,4 +2,6 @@
     export let data;
 </script>
 
-Read Posts
+<h1>
+    Testing
+</h1>

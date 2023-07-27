@@ -12,7 +12,6 @@
 
 <section class="flex flex-col items-center">
     <slot />
-
     <aside>
         <h3>More Posts</h3>
         <ul>

@@ -115,12 +115,19 @@ function create_ssr_component(fn) {
     $$render
   };
 }
+function add_attribute(name, value, boolean) {
+  if (value == null || boolean && !value)
+    return "";
+  const assignment = boolean && value === true ? "" : `="${escape(value, true)}"`;
+  return ` ${name}${assignment}`;
+}
 export {
   escape as a,
-  setContext as b,
+  add_attribute as b,
   create_ssr_component as c,
-  safe_not_equal as d,
+  setContext as d,
   each as e,
+  safe_not_equal as f,
   getContext as g,
   missing_component as m,
   noop as n,
