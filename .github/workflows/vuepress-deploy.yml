@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@gh-pages
+      uses: actions/checkout@main
 
     - name: svelte-deploy
       run: yarn && yarn build
