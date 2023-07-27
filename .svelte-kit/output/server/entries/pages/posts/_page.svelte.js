@@ -3,7 +3,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { data } = $$props;
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
-  return `<p data-svelte-h="svelte-5pv71l">Read Posts</p>`;
+  return `<h1 data-svelte-h="svelte-2pk9xe">Testing</h1>`;
 });
 export {
   Page as default

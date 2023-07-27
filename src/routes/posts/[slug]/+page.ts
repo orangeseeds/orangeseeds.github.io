@@ -1,3 +1,4 @@
+import { error } from "@sveltejs/kit";
 
 export async function load({ fetch, params }) {
 
@@ -9,16 +10,19 @@ export async function load({ fetch, params }) {
     // if (!post) {
     //     throw error(404)
     // }
+    try {
+        const component = await import(`../../../lib/posts/${params.slug}.md`);
+        return {
+            post: component.metadata,
+            component: component.default,
+            layout: {
+                fullWidth: true,
+            },
+        };
 
-    const component = await import(`../../../lib/posts/${params.slug}.md`);
+    } catch (e) {
+        throw error(404)
+    }
     // const compiled = await compile(component.default)
-
-    return {
-        post: component.metadata,
-        component: component.default,
-        layout: {
-            fullWidth: true,
-        },
-    };
 
 }
