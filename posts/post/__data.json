@@ -1,0 +1,1 @@
+{"type":"data","nodes":[{"type":"data","data":[{"formData":-1}],"uses":{}},{"type":"data","data":[{"posts":1},[2],{"title":3,"date":4,"description":5,"meta":6,"next":11,"previous":11},"post","2022-11-29","Blog Post 3 Description",{"root":7,"dir":8,"base":9,"ext":10,"name":3},"/","/src/lib/posts","post.md",".md",0],"uses":{}},{"type":"data","data":[null],"uses":{}}]}

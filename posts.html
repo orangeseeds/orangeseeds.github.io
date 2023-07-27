@@ -13,10 +13,11 @@
 		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.cf010ec4.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.b170b7b1.js">
 		<link rel="modulepreload" href="./_app/immutable/nodes/0.ef210a9a.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/3.b670f18f.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.a3fa6702.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/5.d4be5097.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents"> <nav data-svelte-h="svelte-xj1woj"><a href="/">home</a> <a href="/about">about</a></nav>  <h1 data-svelte-h="svelte-18qztf0">Welcome Home!</h1> <h2 data-svelte-h="svelte-17s9iu6">thIs</h2>                 
+		<div style="display: contents"> <nav data-svelte-h="svelte-xj1woj"><a href="/">home</a> <a href="/about">about</a></nav> <div class="layout"><main><p data-svelte-h="svelte-5pv71l">Read Posts</p></main></div> <aside><h3 data-svelte-h="svelte-ilj6ua">More Posts</h3> <ul><li><a href="/posts/post">post</a> </li></ul></aside> 
 			
 			<script>
 				{
@@ -27,14 +28,14 @@
 
 					const element = document.currentScript.parentElement;
 
-					const data = [{"type":"data","data":{formData:void 0},"uses":{}},{"type":"data","data":{formData:void 0},"uses":{}}];
+					const data = [{"type":"data","data":{formData:void 0},"uses":{}},{"type":"data","data":{posts:[{title:"post",date:"2022-11-29",description:"Blog Post 3 Description",meta:{root:"/",dir:"/src/lib/posts",base:"post.md",ext:".md",name:"post"},next:0,previous:0}]},"uses":{}},null];
 
 					Promise.all([
 						import("./_app/immutable/entry/start.4daf5f5c.js"),
 						import("./_app/immutable/entry/app.e7f245bc.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 3],
+							node_ids: [0, 2, 5],
 							data,
 							form: null,
 							error: null
