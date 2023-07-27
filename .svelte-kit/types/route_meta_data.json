@@ -10,17 +10,18 @@
 		"src/routes/+layout.js",
 		"src/routes/+layout.server.js"
 	],
-	"/blog": [
-		"src/routes/blog/+layout.server.js",
+	"/posts": [
+		"src/routes/posts/+layout.server.js",
 		"src/routes/+layout.js",
 		"src/routes/+layout.server.js",
-		"src/routes/blog/+layout.server.js",
+		"src/routes/posts/+layout.server.js",
 		"src/routes/+layout.js",
 		"src/routes/+layout.server.js"
 	],
-	"/blog/[slug]": [
-		"src/routes/blog/[slug]/+page.server.ts",
-		"src/routes/blog/+layout.server.js",
+	"/posts/[slug]": [
+		"src/routes/posts/[slug]/+page.ts",
+		"src/routes/posts/[slug]/+page.server.ts",
+		"src/routes/posts/+layout.server.js",
 		"src/routes/+layout.js",
 		"src/routes/+layout.server.js"
 	]

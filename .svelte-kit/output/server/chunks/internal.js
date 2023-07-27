@@ -1,4 +1,4 @@
-import { c as create_ssr_component, a as setContext, v as validate_component, m as missing_component } from "./ssr.js";
+import { c as create_ssr_component, b as setContext, v as validate_component, m as missing_component } from "./ssr.js";
 import "./paths.js";
 let public_env = {};
 function set_private_env(environment) {
@@ -46,7 +46,7 @@ const Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {
       stores.page.set(page);
     }
-    $$rendered = `  ${constructors[1] ? `${validate_component(constructors[0] || missing_component, "svelte:component").$$render(
+    $$rendered = ` ${constructors[1] ? `${validate_component(constructors[0] || missing_component, "svelte:component").$$render(
       $$result,
       { data: data_0, this: components[0] },
       {
@@ -184,7 +184,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "h33l22"
+  version_hash: "ypu33o"
 };
 function get_hooks() {
   return {};

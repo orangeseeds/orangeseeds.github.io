@@ -1,12 +1,11 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	// export let data;
-
 </script>
 
 <!-- <h1>Welcome to SvelteKit {data.formData ?? "Empty"}</h1> -->
 
 <h1>Welcome Home!</h1>
+
+## thIs
 
 
 <!-- default form action -->
