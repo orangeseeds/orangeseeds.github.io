@@ -7,12 +7,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
 
-    - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
+    - name: svelte-deploy
+      run: yarn && yarn build
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: orangeseeds/orangeseeds.github.io
-        TARGET_BRANCH: main
-        BUILD_SCRIPT: yarn && yarn docs:build
-        BUILD_DIR: blog/.vuepress/dist
+        TARGET_BRANCH: svelte
+        BUILD_SCRIPT: yarn && yarn build
+        BUILD_DIR: ./
         CNAME: https://orangeseeds.github.io/
