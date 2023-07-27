@@ -1,28 +1,5 @@
 <script lang="ts">
+    // import "$lib/app.css";
 </script>
 
-<!-- <h1>Welcome to SvelteKit {data.formData ?? "Empty"}</h1> -->
-
-<h1>Welcome Home!</h1>
-
-## thIs
-
-
-<!-- default form action -->
-<!-- <form method="post"> -->
-<!-- 	<label for="name" -->
-<!-- 		>Name -->
-<!-- 		<input name="name" /> -->
-<!-- 	</label> -->
-<!-- 	<button type="submit">Submit</button> -->
-<!-- </form> -->
-
-
-<!---->
-<!-- <form method="post" action="?/create"> -->
-<!-- 	<label for="name" -->
-<!-- 		>Name -->
-<!-- 		<input name="name" /> -->
-<!-- 	</label> -->
-<!-- 	<button type="submit">Submit</button> -->
-<!-- </form> -->
+<h1 class="text-green-600">Welcome Home!</h1>

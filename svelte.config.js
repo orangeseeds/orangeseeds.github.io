@@ -5,7 +5,11 @@ import { mdsvex } from 'mdsvex';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
-    extensions: ['.md', '.svelte']
+    extensions: ['.md', '.svelte'],
+    // layout: {
+    //     article: "./src/lib/components/Article.svelte",
+    //     _: "./src/lib/components/Article.svelte"
+    // }
 }
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

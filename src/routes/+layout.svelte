@@ -1,6 +1,9 @@
-<nav>
-	<a href="/">home</a>
-	<a href="/about">about</a>
-</nav>
+<script>
+    import Nav from "./Nav.svelte";
+</script>
 
-<slot />
+<Nav />
+
+<main class="px-8 py-5">
+    <slot />
+</main>

@@ -49,8 +49,8 @@ declare module '$env/static/private' {
 	export const XDG_SEAT: string;
 	export const PWD: string;
 	export const npm_package_devDependencies_vite: string;
-	export const XDG_SESSION_DESKTOP: string;
 	export const LOGNAME: string;
+	export const XDG_SESSION_DESKTOP: string;
 	export const XDG_SESSION_TYPE: string;
 	export const npm_package_devDependencies__typescript_eslint_parser: string;
 	export const PNPM_HOME: string;
@@ -64,8 +64,8 @@ declare module '$env/static/private' {
 	export const MOTD_SHOWN: string;
 	export const HOME: string;
 	export const AUTOJUMP_ERROR_PATH: string;
-	export const LANG: string;
 	export const LC_PAPER: string;
+	export const LANG: string;
 	export const npm_package_scripts_gh_pages: string;
 	export const npm_package_devDependencies_typescript: string;
 	export const XDG_CURRENT_DESKTOP: string;
@@ -85,8 +85,8 @@ declare module '$env/static/private' {
 	export const npm_lifecycle_script: string;
 	export const npm_package_devDependencies_svelte_check: string;
 	export const XDG_SESSION_CLASS: string;
-	export const LC_IDENTIFICATION: string;
 	export const TERM: string;
+	export const LC_IDENTIFICATION: string;
 	export const npm_package_name: string;
 	export const npm_package_devDependencies__esbuild_plugins_node_globals_polyfill: string;
 	export const npm_package_type: string;
@@ -114,6 +114,7 @@ declare module '$env/static/private' {
 	export const DEBUGINFOD_URLS: string;
 	export const LC_TIME: string;
 	export const npm_package_scripts_dev: string;
+	export const npm_package_devDependencies__tailwindcss_typography: string;
 	export const GTK3_MODULES: string;
 	export const XDG_DATA_DIRS: string;
 	export const npm_package_scripts_check: string;
@@ -183,8 +184,8 @@ declare module '$env/dynamic/private' {
 		XDG_SEAT: string;
 		PWD: string;
 		npm_package_devDependencies_vite: string;
-		XDG_SESSION_DESKTOP: string;
 		LOGNAME: string;
+		XDG_SESSION_DESKTOP: string;
 		XDG_SESSION_TYPE: string;
 		npm_package_devDependencies__typescript_eslint_parser: string;
 		PNPM_HOME: string;
@@ -198,8 +199,8 @@ declare module '$env/dynamic/private' {
 		MOTD_SHOWN: string;
 		HOME: string;
 		AUTOJUMP_ERROR_PATH: string;
-		LANG: string;
 		LC_PAPER: string;
+		LANG: string;
 		npm_package_scripts_gh_pages: string;
 		npm_package_devDependencies_typescript: string;
 		XDG_CURRENT_DESKTOP: string;
@@ -219,8 +220,8 @@ declare module '$env/dynamic/private' {
 		npm_lifecycle_script: string;
 		npm_package_devDependencies_svelte_check: string;
 		XDG_SESSION_CLASS: string;
-		LC_IDENTIFICATION: string;
 		TERM: string;
+		LC_IDENTIFICATION: string;
 		npm_package_name: string;
 		npm_package_devDependencies__esbuild_plugins_node_globals_polyfill: string;
 		npm_package_type: string;
@@ -248,6 +249,7 @@ declare module '$env/dynamic/private' {
 		DEBUGINFOD_URLS: string;
 		LC_TIME: string;
 		npm_package_scripts_dev: string;
+		npm_package_devDependencies__tailwindcss_typography: string;
 		GTK3_MODULES: string;
 		XDG_DATA_DIRS: string;
 		npm_package_scripts_check: string;
