@@ -7,7 +7,6 @@
 <!-- <h1>Welcome to SvelteKit {data.formData ?? "Empty"}</h1> -->
 
 <h1>Welcome Home!</h1>
-<a href="{base}/blog/1">post #1</a>
 
 
 <!-- default form action -->

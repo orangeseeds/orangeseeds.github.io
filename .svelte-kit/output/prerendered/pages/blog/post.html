@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link rel="modulepreload" href="../_app/immutable/entry/start.3938545a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.e108d1fd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.2c648f85.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.76d6fdf9.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.6961a6e5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.aaba837c.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.e683dbec.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/2.1d9b8daa.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/6.ab69adfa.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <nav data-svelte-h="svelte-xj1woj"><a href="/">home</a> <a href="/about">about</a></nav> <div class="layout"><main> <!-- HTML_TAG_START -->---
+title: post
+date: "2022-11-29"
+description: Blog Post 3 Description
+---
+
+# this is a test file
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<script>
+let count = 0
+
+</script>
+
+<button on:click={()=>(count++)}>
+Click {count}
+</button>
+<!-- HTML_TAG_END --></main></div>           
+			
+			<script>
+				{
+					__sveltekit_h33l22 = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":{formData:void 0},"uses":{}},{"type":"data","data":{summaries:[{slug:"1",title:"post #1",body:"body #1"},{slug:"2",title:"post #2",body:"body #2"},{slug:"3",title:"post #3",body:"body #3"},{slug:"4",title:"post #4",body:"body #4"}]},"uses":{}},{"type":"data","data":{post:{title:"post",date:"2022-11-29",description:"Blog Post 3 Description",meta:{root:"",dir:"../../../lib/posts",base:"test.md",ext:".md",name:"test"},next:0,previous:0},component:"---\ntitle: post\ndate: \"2022-11-29\"\ndescription: Blog Post 3 Description\n---\n\n# this is a test file\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n\u003Cscript>\nlet count = 0\n\n\u003C/script>\n\n\u003Cbutton on:click={()=>(count++)}>\nClick {count}\n\u003C/button>\n",layout:{fullWidth:true}},"uses":{"params":["slug"]}}];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.3938545a.js"),
+						import("../_app/immutable/entry/app.6961a6e5.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 6],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
