@@ -8,6 +8,7 @@ jobs:
       uses: actions/checkout@gh-pages
 
     - name: svelte-deploy
+      run: yarn && yarn build
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: orangeseeds/orangeseeds.github.io
