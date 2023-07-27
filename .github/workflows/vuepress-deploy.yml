@@ -12,7 +12,7 @@ jobs:
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: orangeseeds/orangeseeds.github.io
-        TARGET_BRANCH: gh-pages
+        TARGET_BRANCH: svelte
         BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: ./
         CNAME: https://orangeseeds.github.io/
