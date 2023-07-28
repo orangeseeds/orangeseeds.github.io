@@ -16,9 +16,10 @@
  */
 let data;
 
-export function load() {
+export function load({ url }) {
     return {
-        formData: data
+        formData: data,
+        url: url.href,
     }
 }
 

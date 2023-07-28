@@ -1,5 +1,5 @@
 let data;
-function load() {
+function load({ url }) {
   return {
     formData: data
   };

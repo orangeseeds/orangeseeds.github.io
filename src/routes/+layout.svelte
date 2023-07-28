@@ -1,9 +1,14 @@
 <script>
+    import Footer from "./Footer.svelte";
     import Nav from "./Nav.svelte";
 </script>
 
-<Nav />
+<div class="relative min-h-[100vh]">
+    <Nav />
 
-<main class="px-8 py-5">
-    <slot />
-</main>
+    <main class="px-8 py-5 mb-6">
+        <slot />
+    </main>
+
+    <Footer />
+</div>
