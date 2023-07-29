@@ -100,3 +100,15 @@ export function animateRing(group: THREE.Group, elapsedTime: number) {
     group.children[2].scale.x = 1 - group.children[2].material.opacity
     group.children[2].scale.y = 1 - group.children[2].material.opacity
 }
+
+export function stopAllAnimation() {
+    if (tZoom) {
+        tZoom.kill()
+    }
+    if (tSpin) {
+        tSpin.kill()
+    }
+    if (tAnimateToLoc) {
+        tAnimateToLoc.kill()
+    }
+}

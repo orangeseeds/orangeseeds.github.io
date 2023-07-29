@@ -14,7 +14,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<footer class="footer footer-center px-4 py-2 bg-base-300 text-base-content flex justify-center max-w-[100vw] absolute bottom-0" data-svelte-h="svelte-1sgf6md"><img width="24" height="24"${add_attribute("src", logo, 0)} alt="logo"> <p class="text-xs sm:text-sm font-medium flex">Copyright © 2023 - All right reserved by <a class="font-semibold hover:underline" href="https://github.com/orangeseeds">Orangeseeds</a></p></footer>`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<div class="relative min-h-[100vh]">${validate_component(Nav, "Nav").$$render($$result, {}, {}, {})} <main class="mb-6">${slots.default ? slots.default({}) : ``}</main> ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</div>`;
+  return `<div class="relative min-h-[100vh]">${validate_component(Nav, "Nav").$$render($$result, {}, {}, {})} <main class="pb-20">${slots.default ? slots.default({}) : ``}</main> ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</div>`;
 });
 export {
   Layout as default

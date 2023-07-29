@@ -6,7 +6,7 @@
 <div class="relative min-h-[100vh]">
     <Nav />
 
-    <main class="mb-6">
+    <main class="pb-20">
         <slot />
     </main>
 

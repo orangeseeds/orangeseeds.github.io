@@ -5,6 +5,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
 const EARTH_MODEL = '/low_poly_earth.glb'
 const SEA_MATCAP = '/blue_sphere_matcap.png'
+let animationFrameID: number;
 
 interface Size {
     width: number;
@@ -108,10 +109,6 @@ export class App {
 }
 
 
-
-
-let sizes: Size;
-
 export function init(size: Size) {
     const app = new App(size)
 
@@ -161,7 +158,7 @@ export function init(size: Size) {
         // console.log(camera.position.x, camera.position.y, camera.position.z)
         // }
         app.render()
-        window.requestAnimationFrame(tick)
+        animationFrameID = window.requestAnimationFrame(tick)
     }
 
     tick()
@@ -259,4 +256,8 @@ function animateRing(group, elapsedTime) {
     group.children[2].material.opacity = 1 - group.children[2].position.y
     group.children[2].scale.x = 1 - group.children[2].material.opacity
     group.children[2].scale.y = 1 - group.children[2].material.opacity
+}
+
+export function clean() {
+    window.cancelAnimationFrame(animationFrameID)
 }

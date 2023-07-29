@@ -1,13 +1,18 @@
 <script lang="ts">
-    import { onMount } from "svelte";
-    import { init, App } from "$lib/scripts/globe";
-    import { zoom, animateToLoc } from "$lib/scripts/animations";
+    import { onDestroy, onMount } from "svelte";
+    import { init, clean, App } from "$lib/scripts/globe";
+    import {
+        zoom,
+        animateToLoc,
+        stopAllAnimation,
+    } from "$lib/scripts/animations";
     import type { Object3D } from "three";
     let root: HTMLDivElement;
     let app: App;
     let globe: Object3D;
     let object: Object3D;
     let darkTheme = false;
+    let trySpin: number;
     onMount(() => {
         if (root.childElementCount < 1) {
             app = init({
@@ -18,14 +23,28 @@
         }
 
         resize();
-        const trySpin = setInterval(() => {
+        let attempts = 0;
+        trySpin = setInterval(() => {
             if (app.objects.get("globe")) {
                 globe = app.objects.get("globe")!;
                 object = app.objects.get("object")!;
                 zoom(app.camera, globe);
                 clearInterval(trySpin);
+            } else {
+                attempts++;
+                if (attempts >= 100) {
+                    clearInterval(trySpin);
+                    console.error(
+                        "Failed to find the 'globe' object after multiple attempts."
+                    );
+                }
             }
         }, 10);
+
+        onDestroy(() => {
+            stopAllAnimation();
+            clean();
+        });
     });
 
     function toggleTheme() {

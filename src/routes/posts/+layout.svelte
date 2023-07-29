@@ -1,3 +1,3 @@
-<div class="mx-8 my-4">
+<div class="mx-8 mt-4">
     <slot />
 </div>

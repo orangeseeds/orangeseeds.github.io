@@ -1,4 +1,4 @@
-import { posts } from "./posts";
+import { posts } from "$lib/scripts/posts";
 
 export function load() {
     return {
