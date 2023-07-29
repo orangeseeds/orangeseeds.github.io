@@ -44,6 +44,8 @@ declare module '$env/static/private' {
 	export const npm_package_dependencies_daisyui: string;
 	export const DESKTOP_SESSION: string;
 	export const LC_MONETARY: string;
+	export const npm_package_dependencies_gsap: string;
+	export const npm_package_devDependencies__types_three: string;
 	export const EDITOR: string;
 	export const GTK_MODULES: string;
 	export const XDG_SEAT: string;
@@ -54,6 +56,7 @@ declare module '$env/static/private' {
 	export const XDG_SESSION_TYPE: string;
 	export const npm_package_devDependencies__typescript_eslint_parser: string;
 	export const PNPM_HOME: string;
+	export const npm_package_devDependencies__types_gsap: string;
 	export const npm_package_scripts_build: string;
 	export const OMF_PATH: string;
 	export const XAUTHORITY: string;
@@ -72,6 +75,7 @@ declare module '$env/static/private' {
 	export const npm_package_version: string;
 	export const STARSHIP_SHELL: string;
 	export const npm_package_devDependencies__typescript_eslint_eslint_plugin: string;
+	export const npm_package_dependencies_three: string;
 	export const OSTYPE: string;
 	export const XDG_SEAT_PATH: string;
 	export const npm_package_devDependencies_rollup_plugin_node_polyfills: string;
@@ -124,6 +128,7 @@ declare module '$env/static/private' {
 	export const GDMSESSION: string;
 	export const npm_package_devDependencies__sveltejs_kit: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
+	export const npm_package_dependencies_lil_gui: string;
 	export const MAIL: string;
 	export const npm_config_registry: string;
 	export const ALACRITTY_WINDOW_ID: string;
@@ -179,6 +184,8 @@ declare module '$env/dynamic/private' {
 		npm_package_dependencies_daisyui: string;
 		DESKTOP_SESSION: string;
 		LC_MONETARY: string;
+		npm_package_dependencies_gsap: string;
+		npm_package_devDependencies__types_three: string;
 		EDITOR: string;
 		GTK_MODULES: string;
 		XDG_SEAT: string;
@@ -189,6 +196,7 @@ declare module '$env/dynamic/private' {
 		XDG_SESSION_TYPE: string;
 		npm_package_devDependencies__typescript_eslint_parser: string;
 		PNPM_HOME: string;
+		npm_package_devDependencies__types_gsap: string;
 		npm_package_scripts_build: string;
 		OMF_PATH: string;
 		XAUTHORITY: string;
@@ -207,6 +215,7 @@ declare module '$env/dynamic/private' {
 		npm_package_version: string;
 		STARSHIP_SHELL: string;
 		npm_package_devDependencies__typescript_eslint_eslint_plugin: string;
+		npm_package_dependencies_three: string;
 		OSTYPE: string;
 		XDG_SEAT_PATH: string;
 		npm_package_devDependencies_rollup_plugin_node_polyfills: string;
@@ -259,6 +268,7 @@ declare module '$env/dynamic/private' {
 		GDMSESSION: string;
 		npm_package_devDependencies__sveltejs_kit: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
+		npm_package_dependencies_lil_gui: string;
 		MAIL: string;
 		npm_config_registry: string;
 		ALACRITTY_WINDOW_ID: string;

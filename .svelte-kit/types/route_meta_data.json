@@ -2,30 +2,23 @@
 	"/": [
 		"src/routes/+page.server.js",
 		"src/routes/+layout.js",
-		"src/routes/+layout.server.js",
-		"src/routes/+layout.js",
-		"src/routes/+layout.server.js"
+		"src/routes/+layout.js"
 	],
 	"/about": [
-		"src/routes/+layout.js",
-		"src/routes/+layout.server.js"
+		"src/routes/+layout.js"
 	],
 	"/posts": [
 		"src/routes/posts/+layout.server.js",
 		"src/routes/+layout.js",
-		"src/routes/+layout.server.js",
 		"src/routes/posts/+layout.server.js",
-		"src/routes/+layout.js",
-		"src/routes/+layout.server.js"
+		"src/routes/+layout.js"
 	],
 	"/posts/[slug]": [
 		"src/routes/posts/[slug]/+page.ts",
 		"src/routes/posts/[slug]/+page.server.ts",
 		"src/routes/posts/+layout.server.js",
 		"src/routes/+layout.js",
-		"src/routes/+layout.server.js",
 		"src/routes/posts/+layout.server.js",
-		"src/routes/+layout.js",
-		"src/routes/+layout.server.js"
+		"src/routes/+layout.js"
 	]
 }
