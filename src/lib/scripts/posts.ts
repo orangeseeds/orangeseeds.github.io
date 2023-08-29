@@ -9,6 +9,14 @@ export interface Post {
     title: string;
     description: string;
     date: string;
+    tags: string[];
+    readTime: string;
+}
+
+export interface PostWithAdditional extends Post {
+    slug: string;
+    next: Post | 0;
+    previous: Post | 0;
 }
 
 export const posts = Object.entries(

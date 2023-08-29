@@ -30,7 +30,6 @@
         "gh-pages": "^5.0.0",
         "mdsvex": "^0.11.0",
         "postcss": "^8.4.27",
-        "prettier": "^2.8.0",
         "prettier-plugin-svelte": "^2.10.1",
         "rollup-plugin-node-polyfills": "^0.2.1",
         "svelte": "^4.0.5",
@@ -45,6 +44,7 @@
         "daisyui": "^3.5.0",
         "gsap": "^3.12.2",
         "lil-gui": "^0.18.2",
+        "shiki": "^0.14.3",
         "three": "^0.140.2"
     }
 }

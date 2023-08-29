@@ -1,4 +1,4 @@
-import { c as create_ssr_component, d as setContext, v as validate_component, m as missing_component } from "./ssr.js";
+import { c as create_ssr_component, f as setContext, v as validate_component, m as missing_component } from "./ssr.js";
 import "./paths.js";
 let public_env = {};
 function set_private_env(environment) {
@@ -211,7 +211,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1imblug"
+  version_hash: "ntuv7h"
 };
 function get_hooks() {
   return {};

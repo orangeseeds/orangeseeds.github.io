@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as each, b as add_attribute, a as escape, v as validate_component } from "../../chunks/ssr.js";
+import { c as create_ssr_component, e as each, d as add_attribute, a as escape, v as validate_component } from "../../chunks/ssr.js";
 /* empty css                */const Nav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const navLinks = [
     { name: "Home", path: "/" },

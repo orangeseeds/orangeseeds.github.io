@@ -60,7 +60,7 @@ declare module '$env/static/private' {
 	export const npm_package_scripts_build: string;
 	export const OMF_PATH: string;
 	export const XAUTHORITY: string;
-	export const npm_package_devDependencies_prettier: string;
+	export const npm_package_dependencies_shiki: string;
 	export const npm_package_devDependencies_eslint_config_prettier: string;
 	export const XDG_GREETER_DATA_DIR: string;
 	export const TERMINAL: string;
@@ -200,7 +200,7 @@ declare module '$env/dynamic/private' {
 		npm_package_scripts_build: string;
 		OMF_PATH: string;
 		XAUTHORITY: string;
-		npm_package_devDependencies_prettier: string;
+		npm_package_dependencies_shiki: string;
 		npm_package_devDependencies_eslint_config_prettier: string;
 		XDG_GREETER_DATA_DIR: string;
 		TERMINAL: string;

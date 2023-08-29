@@ -1,11 +1,19 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
-import { mdsvex } from 'mdsvex';
+import { mdsvex, escapeSvelte } from 'mdsvex';
+import shiki from 'shiki'
 
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
     extensions: ['.md', '.svelte'],
+    highlight: {
+        highlighter: async (code, lang = 'text') => {
+            const highlighter = await shiki.getHighlighter({ theme: 'github-dark-dimmed' })
+            const html = escapeSvelte(highlighter.codeToHtml(code, { lang }))
+            return `{@html \`${html}\` }`
+        }
+    },
     // layout: {
     //     article: "./src/lib/components/Article.svelte",
     //     _: "./src/lib/components/Article.svelte"
