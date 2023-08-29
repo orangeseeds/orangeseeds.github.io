@@ -1,10 +1,10 @@
 import { searchPosts } from "$lib/scripts/posts";
 import { error, json, type RequestHandler } from "@sveltejs/kit";
 
-export const GET: RequestHandler = ({ url }) => {
+export const GET: RequestHandler = ({ params }) => {
     try {
-        const query = url.searchParams.get('search_query')!;
-        const posts = searchPosts(query).map((post) => {
+        const query = params.query!;
+        const posts = searchPosts(query.replaceAll("_", " ")).map((post) => {
             return {
                 title: post.title,
                 slug: post.title.replaceAll(" ", "_").toLowerCase(),
@@ -21,6 +21,6 @@ export const GET: RequestHandler = ({ url }) => {
         })
 
     } catch (e) {
-        throw error(404)
+        error(404)
     }
 }

@@ -10,7 +10,7 @@ export async function load({ params }) {
         };
 
     } catch (e) {
-        throw error(404)
+        error(404)
     }
     // const compiled = await compile(component.default)
 

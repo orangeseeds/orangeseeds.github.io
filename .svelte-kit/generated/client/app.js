@@ -21,7 +21,7 @@ export const dictionary = {
 		"/about": [6],
 		"/posts": [7,[2]],
 		"/posts/[slug]": [~8,[2,3]],
-		"/search": [~9],
+		"/search/[query]": [~9],
 		"/tags/[tag]": [~10,[4]]
 	};
 

@@ -21,12 +21,13 @@
 		"src/routes/posts/+layout.server.js",
 		"src/routes/+layout.js"
 	],
-	"/search": [
-		"src/routes/search/+page.server.ts",
+	"/search/[query]": [
+		"src/routes/search/[query]/+page.ts",
+		"src/routes/search/[query]/+page.server.ts",
 		"src/routes/+layout.js"
 	],
-	"/search/suggest": [
-		"src/routes/search/suggest/+server.ts"
+	"/suggest/[query]": [
+		"src/routes/suggest/[query]/+server.ts"
 	],
 	"/tags": [
 		"src/routes/tags/+layout.server.js",

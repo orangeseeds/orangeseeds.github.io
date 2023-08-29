@@ -3,10 +3,10 @@ import { searchPosts } from "$lib/scripts/posts";
 import { error } from "@sveltejs/kit";
 
 
-export async function load({ params, url }) {
+export async function load({ params }) {
     try {
-        const query = url.searchParams.get('search_query');
-        const posts = searchPosts(query);
+        const query = params.query;
+        const posts = searchPosts(query.replaceAll("_", " "));
 
         return {
             posts: posts,
@@ -14,6 +14,6 @@ export async function load({ params, url }) {
         }
 
     } catch (e) {
-        throw error(404)
+        error(404)
     }
 }
