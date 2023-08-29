@@ -20,5 +20,21 @@
 		"src/routes/+layout.js",
 		"src/routes/posts/+layout.server.js",
 		"src/routes/+layout.js"
+	],
+	"/search": [
+		"src/routes/search/+page.server.ts",
+		"src/routes/+layout.js"
+	],
+	"/search/suggest": [
+		"src/routes/search/suggest/+server.ts"
+	],
+	"/tags": [
+		"src/routes/tags/+layout.server.js",
+		"src/routes/+layout.js"
+	],
+	"/tags/[tag]": [
+		"src/routes/tags/[tag]/+page.server.ts",
+		"src/routes/tags/+layout.server.js",
+		"src/routes/+layout.js"
 	]
 }

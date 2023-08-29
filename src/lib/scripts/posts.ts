@@ -19,7 +19,7 @@ export interface PostWithAdditional extends Post {
     previous: Post | 0;
 }
 
-export const posts = Object.entries(
+const posts = Object.entries(
     import.meta.glob<GlobEntry>('$lib/posts/**/*.md', { eager: true }))
     .map(
         ([filepath, globEntry]) => {
@@ -38,3 +38,23 @@ export const posts = Object.entries(
         next: allPosts[index - 1] || 0,
         previous: allPosts[index + 1] || 0,
     }))
+
+export const getAllPosts = () => {
+    return posts;
+}
+
+export const filterPostsByTags = (tags: string[]) => {
+    return posts.filter(post => {
+        return tags.every(tag => post.tags.includes(tag));
+    });
+}
+
+export const filterPostsByDate = (date: string) => {
+    return posts.filter(post => post.date === date);
+}
+
+export const searchPosts = (query: string) => {
+    return posts.filter(post => {
+        return post.title.toLowerCase().includes(query.toLowerCase());
+    });
+}

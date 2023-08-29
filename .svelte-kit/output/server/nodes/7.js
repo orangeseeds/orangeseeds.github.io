@@ -8,6 +8,6 @@ export { universal };
 export const universal_id = "src/routes/posts/[slug]/+page.ts";
 export { server };
 export const server_id = "src/routes/posts/[slug]/+page.server.ts";
-export const imports = ["_app/immutable/nodes/7.a6354e50.js","_app/immutable/chunks/preload-helper.cf010ec4.js","_app/immutable/chunks/control.f5b05b5f.js","_app/immutable/chunks/scheduler.8a796165.js","_app/immutable/chunks/index.e4ad3c2b.js","_app/immutable/chunks/each.e59479a4.js","_app/immutable/chunks/index.8e806f53.js"];
-export const stylesheets = ["_app/immutable/assets/app.759f252f.css"];
+export const imports = ["_app/immutable/nodes/7.f7616cbe.js","_app/immutable/chunks/preload-helper.cf010ec4.js","_app/immutable/chunks/control.f5b05b5f.js","_app/immutable/chunks/scheduler.b108d059.js","_app/immutable/chunks/index.e68ba0ea.js","_app/immutable/chunks/each.e59479a4.js","_app/immutable/chunks/singletons.f9423aba.js","_app/immutable/chunks/paths.e6adc59f.js"];
+export const stylesheets = ["_app/immutable/assets/app.5a52efd2.css"];
 export const fonts = [];

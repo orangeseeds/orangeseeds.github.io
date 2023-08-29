@@ -31,7 +31,7 @@
     <ol class="text-sm font-light h-40 max-h-screen overflow-y">
         {#each toc as elem, index}
             <button
-                class="text-left w-fit hover:underline text-emerald-600 text-sm px-10 border border-0 border-l py-2 hover:border-l-1 hover:border-slate-500"
+                class="text-left w-fit hover:underline text-emerald-600 text-sm px-10 box-border border border-0 border-l py-2 hover:border-l-1 hover:border-slate-500 transition-all duration-75 box-border"
                 class:border-l-2={active[index]}
                 class:border-slate-600={active[index]}
                 class:font-semibold={active[index]}
@@ -48,3 +48,11 @@
         {/each}
     </ol>
 </div>
+
+<svelte:window
+    on:scroll={() => {
+        if (window.scrollY < 10) {
+            active = active.fill(false);
+        }
+    }}
+/>

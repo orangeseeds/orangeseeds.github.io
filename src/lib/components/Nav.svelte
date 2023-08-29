@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { base } from "$app/paths";
     import "$lib/app.css";
     import { onMount } from "svelte";
 
@@ -21,6 +22,25 @@
         { name: "About", path: "/about" },
         { name: "Posts", path: "/posts" },
     ];
+
+    let query = "";
+    let loadedRes;
+    function sendRequest() {
+        fetch(`${base}/search/suggest?search_query=${query}`).then(
+            async (res) => {
+                loadedRes = res.json();
+            }
+        );
+    }
+
+    let timeout: number | undefined;
+    var debounce = function (func, delay: number | undefined) {
+        clearTimeout(timeout);
+
+        timeout = setTimeout(func, delay);
+    };
+
+    let loaded = false;
 </script>
 
 <nav class="navbar bg-base-100 px-8 py-2">
@@ -33,6 +53,63 @@
         {/each}
     </div>
     <div class="navbar-end">
+        <div class=" max-w-xs relative">
+            <input
+                type="text"
+                class="input input-bordered w-full h-9 text-sm !outline-0"
+                bind:value={query}
+                placeholder="search..."
+                on:keyup={() => {
+                    debounce(sendRequest, 200);
+                    if (loadedRes != null) {
+                        loaded = true;
+                    } else {
+                        loaded = false;
+                    }
+                }}
+                on:blur={() => {
+                    setTimeout(() => {
+                        loaded = false;
+                    }, 300);
+                }}
+            />
+            <ul
+                class="absolute border rounded bg-white top-10 w-full"
+                class:hidden={!loaded}
+            >
+                {#await loadedRes then result}
+                    {@const posts = result?.posts ? result.posts : []}
+                    {#each posts as post}
+                        <li>
+                            <a href="{base}/posts/{post.slug}">
+                                {post.title}
+                            </a>
+                        </li>
+                    {/each}
+
+                    {#if posts.length == 0}
+                        <span>No Post Found..</span>
+                    {/if}
+                {:catch err}
+                    Error.. {err}
+                {/await}
+            </ul>
+        </div>
+        <button
+            class="btn btn-ghost btn-circle"
+            on:click={() => {
+                sendRequest();
+            }}
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                class="fill-current w-5"
+                ><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                /></svg
+            >
+        </button>
         <button class="btn btn-ghost btn-circle">
             <label class="swap swap-rotate scale-[60%] w-full h-full">
                 <!-- this hidden checkbox controls the state -->

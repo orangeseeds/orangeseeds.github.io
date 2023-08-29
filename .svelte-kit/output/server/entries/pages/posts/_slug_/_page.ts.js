@@ -10,7 +10,7 @@ const __variableDynamicImportRuntimeHelper = (glob, path) => {
 };
 async function load({ fetch, params }) {
   try {
-    const component = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../../../lib/posts/testing_out_this_new_build.md": () => import("../../../../chunks/testing_out_this_new_build.js").then((n) => n._) }), `../../../lib/posts/${params.slug}.md`);
+    const component = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../../../lib/posts/new_post_testing_progress.md": () => import("../../../../chunks/new_post_testing_progress.js").then((n) => n._), "../../../lib/posts/testing_out_this_new_build.md": () => import("../../../../chunks/testing_out_this_new_build.js").then((n) => n._) }), `../../../lib/posts/${params.slug}.md`);
     return {
       post: component.metadata,
       component: component.default,

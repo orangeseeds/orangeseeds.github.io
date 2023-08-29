@@ -1,7 +1,8 @@
-import { _ as __vite_glob_0_0 } from "../../../chunks/testing_out_this_new_build.js";
+import { _ as __vite_glob_0_0 } from "../../../chunks/new_post_testing_progress.js";
+import { _ as __vite_glob_0_1 } from "../../../chunks/testing_out_this_new_build.js";
 import { parse } from "path";
 const posts = Object.entries(
-  /* @__PURE__ */ Object.assign({ "/src/lib/posts/testing_out_this_new_build.md": __vite_glob_0_0 })
+  /* @__PURE__ */ Object.assign({ "/src/lib/posts/new_post_testing_progress.md": __vite_glob_0_0, "/src/lib/posts/testing_out_this_new_build.md": __vite_glob_0_1 })
 ).map(
   ([filepath, globEntry]) => {
     return {

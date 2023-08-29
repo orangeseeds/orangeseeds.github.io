@@ -1,14 +1,5 @@
 function noop() {
 }
-const identity = (x) => x;
-function assign(tar, src) {
-  for (const k in src)
-    tar[k] = src[k];
-  return (
-    /** @type {T & S} */
-    tar
-  );
-}
 function run(fn) {
   return fn();
 }
@@ -39,6 +30,9 @@ function get_current_component() {
   if (!current_component)
     throw new Error("Function called outside component initialization");
   return current_component;
+}
+function onDestroy(fn) {
+  get_current_component().$$.on_destroy.push(fn);
 }
 function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
@@ -138,10 +132,9 @@ export {
   each as e,
   setContext as f,
   getContext as g,
-  assign as h,
-  identity as i,
   missing_component as m,
   noop as n,
+  onDestroy as o,
   safe_not_equal as s,
   validate_component as v
 };

@@ -9,7 +9,7 @@
     <div class="flex flex-wrap">
         {#each tags as tag}
             <a
-                href="#"
+                href="/tags/{tag}"
                 class="py-1 px-3 mb-2 rounded-full text-slate-500 text-sm font-medium border border-slate-300 mr-1 hover:cursor-pointer hover:bg-gray-100 hover:underline"
                 >{tag}</a
             >
