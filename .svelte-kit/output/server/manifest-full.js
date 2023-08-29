@@ -10,7 +10,7 @@ return {
 	assets: new Set([".nojekyll","blue_sphere_matcap.png","favicon.svg","icon.png","low_poly_earth.glb"]),
 	mimeTypes: {".png":"image/png",".svg":"image/svg+xml",".glb":"model/gltf-binary"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.bb473fad.js","app":"_app/immutable/entry/app.11928f5f.js","imports":["_app/immutable/entry/start.bb473fad.js","_app/immutable/chunks/scheduler.b108d059.js","_app/immutable/chunks/singletons.f9423aba.js","_app/immutable/chunks/paths.e6adc59f.js","_app/immutable/chunks/control.f5b05b5f.js","_app/immutable/entry/app.11928f5f.js","_app/immutable/chunks/preload-helper.cf010ec4.js","_app/immutable/chunks/scheduler.b108d059.js","_app/immutable/chunks/index.e68ba0ea.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.72976cb9.js","app":"_app/immutable/entry/app.57068a15.js","imports":["_app/immutable/entry/start.72976cb9.js","_app/immutable/chunks/scheduler.8b8ca6cf.js","_app/immutable/chunks/singletons.d3b02895.js","_app/immutable/chunks/paths.9274cf46.js","_app/immutable/chunks/control.f5b05b5f.js","_app/immutable/entry/app.57068a15.js","_app/immutable/chunks/preload-helper.cf010ec4.js","_app/immutable/chunks/scheduler.8b8ca6cf.js","_app/immutable/chunks/index.e1f33fdf.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
@@ -19,35 +19,59 @@ return {
 			__memo(() => import('./nodes/4.js')),
 			__memo(() => import('./nodes/5.js')),
 			__memo(() => import('./nodes/6.js')),
-			__memo(() => import('./nodes/7.js'))
+			__memo(() => import('./nodes/7.js')),
+			__memo(() => import('./nodes/8.js')),
+			__memo(() => import('./nodes/9.js')),
+			__memo(() => import('./nodes/10.js'))
 		],
 		routes: [
 			{
 				id: "/",
 				pattern: /^\/$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 4 },
+				page: { layouts: [0,], errors: [1,], leaf: 5 },
 				endpoint: null
 			},
 			{
 				id: "/about",
 				pattern: /^\/about\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 5 },
+				page: { layouts: [0,], errors: [1,], leaf: 6 },
 				endpoint: null
 			},
 			{
 				id: "/posts",
 				pattern: /^\/posts\/?$/,
 				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 6 },
+				page: { layouts: [0,2,], errors: [1,,], leaf: 7 },
 				endpoint: null
 			},
 			{
 				id: "/posts/[slug]",
 				pattern: /^\/posts\/([^/]+?)\/?$/,
 				params: [{"name":"slug","optional":false,"rest":false,"chained":false}],
-				page: { layouts: [0,2,3,], errors: [1,,,], leaf: 7 },
+				page: { layouts: [0,2,3,], errors: [1,,,], leaf: 8 },
+				endpoint: null
+			},
+			{
+				id: "/search",
+				pattern: /^\/search\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 9 },
+				endpoint: null
+			},
+			{
+				id: "/search/suggest",
+				pattern: /^\/search\/suggest\/?$/,
+				params: [],
+				page: null,
+				endpoint: __memo(() => import('./entries/endpoints/search/suggest/_server.ts.js'))
+			},
+			{
+				id: "/tags/[tag]",
+				pattern: /^\/tags\/([^/]+?)\/?$/,
+				params: [{"name":"tag","optional":false,"rest":false,"chained":false}],
+				page: { layouts: [0,4,], errors: [1,,], leaf: 10 },
 				endpoint: null
 			}
 		],

@@ -21,6 +21,6 @@ export const GET: RequestHandler = ({ url }) => {
         })
 
     } catch (e) {
-        throw error(500)
+        throw error(404)
     }
 }

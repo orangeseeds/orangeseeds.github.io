@@ -14,6 +14,6 @@ export async function load({ params, url }) {
         }
 
     } catch (e) {
-        throw error(500)
+        throw error(404)
     }
 }
